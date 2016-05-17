@@ -1,0 +1,73 @@
+.icons{
+	height: 30%;
+	width: 30%;
+}
+
+
+#nav {
+
+	margin-top: -25px;
+}
+
+#logo {
+	margin-top: -20px !important;
+}
+
+#perroPortada {
+	width: 83%;
+	margin-top: -9%;
+	margin-bottom: -5%;
+	margin-left: -3%;
+}
+
+.icons {
+	width: 100%;
+}
+
+.icons li a {
+	transition: all .2s ease-in-out; 
+}
+
+.icons li a:hover {
+	transform: scale(2); 
+}
+
+#imagepreview {
+	width: 100%;
+	height: 100%;
+	margin-bottom: -9px;
+}
+
+.modal-body {
+	padding: 2px;
+}
+
+.imgGal:hover {
+	/*box-shadow: 1px 1px 2px #BBB;*/
+}
+
+ul.feature-icons li {
+	padding-left: 2.8em;
+}
+
+/*
+.image img:hover {
+-webkit-animation: cssAnimation 2.5s 1 ease-in;
+-moz-animation: cssAnimation 2.5s 1 ease-in;
+-o-animation: cssAnimation 2.5s 1 ease-in;
+z-index: 1;
+position: absolute;
+}
+@-webkit-keyframes cssAnimation {
+from { -webkit-transform: rotate(0deg) scale(1) skew(1deg) translate(10px); }
+to { -webkit-transform: rotate(0deg) scale(2) skew(1deg) translate(0px); }
+}
+@-moz-keyframes cssAnimation {
+from { -moz-transform: rotate(0deg) scale(1) skew(1deg) translate(10px); }
+to { -moz-transform: rotate(0deg) scale(2) skew(1deg) translate(0px); }
+}
+@-o-keyframes cssAnimation {
+from { -o-transform: rotate(0deg) scale(1) skew(1deg) translate(10px); }
+to { -o-transform: rotate(0deg) scale(2) skew(1deg) translate(0px); }
+}
+*/
