@@ -1,4 +1,6 @@
-var app = angular.module('mag', ['ngRoute']).config(function($routeProvider){
+var app = angular.module('mag', ['ngRoute']);
+
+app.config(function($routeProvider, $locationProvider){
     $routeProvider
         .when('/', {
             templateUrl: 'templates/home.html',
@@ -20,4 +22,25 @@ var app = angular.module('mag', ['ngRoute']).config(function($routeProvider){
             templateUrl: 'templates/contacto.html',
             controller: 'contactoController'
         })
+    //$locationProvider.html5Mode(true);
 });
+//var directives = angular.module('directives');
+
+app.directive('showtab',
+    function () {
+        return {
+            link: function (scope, element, attrs) {
+                element.click(function(e) {
+                    e.preventDefault();
+                    $(element).tab('show');
+                });
+            }
+        };
+    });
+/*app.factory('FeedService',['$http',function($http){
+    return {
+        parseFeed : function(url){
+            return $http.jsonp('//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
+        }
+    }
+}]);*/

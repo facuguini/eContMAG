@@ -1,0 +1,25 @@
+<h3>Noticias</h3>
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+		<h4 ng-bind="rssTitle"></h4>
+		<div class="row" style="max-height:400px;overflow:auto;"><!--AGREGAR MEDIA width 992 -> overflow:none-->
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div ng-repeat="item in rss" class="panel panel-default">
+					<div class="panel-heading"><a href="{{item.link}}">{{item.title.__cdata}}</a></div>
+					<div class="panel-body">
+						<p>{{item.description.__cdata}}</p>
+						<small>{{item.pubDate}}</small>
+					</div>
+				</div>
+			</div>
+        </div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+		<h4>Noticias en twitter</h4>
+			<a class="twitter-timeline"  href="https://twitter.com/fguini1905/lists/deportes" data-widget-id="733488291438309376">Tweets from https://twitter.com/fguini1905/lists/deportes</a>
+			<script>
+				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+			</script>
+
+	</div>
+</div>

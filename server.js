@@ -56,5 +56,9 @@ if(cluster.isMaster) {
 
   // Route File with all Routes.
   // require("./app/router/routes.js")(app);
+
+  app.get('/twitter', function(err, data, resp) {
+
+  });
 }
 
