@@ -1,18 +1,38 @@
 <h3>Noticias</h3>
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-		<h4 ng-bind="rssTitle"></h4>
-		<div class="row" style="max-height:400px;overflow:auto;"><!--AGREGAR MEDIA width 992 -> overflow:none-->
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<div ng-repeat="item in rss" class="panel panel-default">
-					<div class="panel-heading"><a href="{{item.link}}">{{item.title.__cdata}}</a></div>
-					<div class="panel-body">
-						<p>{{item.description.__cdata}}</p>
-						<small>{{item.pubDate}}</small>
+		<ul class="nav nav-pills">
+			<li class="active"><a showtab href="#faq">FAQ</a></li>
+			<li><a showtab href="#rss">Noticias</a></li>
+		</ul>
+		<div class="tab-content content-body">
+			<div id="faq" class="tab-pane fade in active">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div ng-repeat="item in faq" class="panel panel-default">
+							<div class="panel-heading"><p>{{item.question}}</p></div>
+							<div class="panel-body">
+								<p>{{item.answer}}</p>
+							</div>
+						</div>
 					</div>
-				</div>
+		        </div>
 			</div>
-        </div>
+			<div id="rss" class="tab-pane fade">
+				<!--<h4 ng-bind="rssTitle"></h4>-->
+				<div class="row" style="max-height:400px;overflow:auto;"><!--AGREGAR MEDIA width 992 -> overflow:none-->
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div ng-repeat="item in rss" class="panel panel-default">
+							<div class="panel-heading"><a href="{{item.link}}">{{item.title.__cdata}}</a></div>
+							<div class="panel-body">
+								<p>{{item.description.__cdata}}</p>
+								<small>{{item.pubDate}}</small>
+							</div>
+						</div>
+					</div>
+		        </div>
+			</div>
+		</div>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 		<h4>Noticias en twitter</h4>

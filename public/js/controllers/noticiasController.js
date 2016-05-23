@@ -1,5 +1,6 @@
 app.controller('noticiasController', ['$scope','$http', function($scope,$http) {
 	$scope.rss = [];
+	$scope.faq = generateFaq();
 	$scope.rssTitle = "";
 	$http({
 	    method  : 'GET',
@@ -51,4 +52,25 @@ var eliminatehtmltags = function(texto) {
 		}
 	}
 	return resultado;
+}
+
+var generateFaq = function() {
+	var faq = [{
+			question: "Pregunta 1",
+			answer: "respuesta 1"
+		},
+		{
+			question: "Pregunta 2",
+			answer: "respuesta 2"
+		},
+		{
+			question: "Pregunta 3",
+			answer: "respuesta 3"
+		},
+		{
+			question: "Pregunta 4",
+			answer: "respuesta 4"
+		}];
+
+	return faq;
 }
